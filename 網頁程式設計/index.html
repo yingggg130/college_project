@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>高雄女中 文儀萬歲</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="dns-prefetch" href="https://apc.codepen.io">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Kosugi&family=M+PLUS+1:wght@100..900&family=Monomaniac+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+	<script>
+		$(".jq-goTop").click(function(e) {
+			e.preventDefault();
+			$("html,body").animate({
+					scrollTop: 0,
+				},
+				600
+			);
+		});
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > 200) {
+				if ($(".goTop").hasClass("hide")) {
+					$(".goTop").toggleClass("hide");
+				}
+			} else {
+				$(".goTop").addClass("hide");
+			}
+		});
+		//		$('section.awSlider .carousel').carousel({
+		//			pause: "hover",
+		//			interval: 2000
+		//		});
+
+		var startImage = $('section.awSlider .item.active > img').attr('src');
+		$('section.awSlider').append('<img src="' + startImage + '">');
+
+		$('section.awSlider .carousel').on('slid.bs.carousel', function() {
+			var bscn = $(this).find('.item.active > img').attr('src');
+			$('section.awSlider > img').attr('src', bscn);
+		});
+
+	</script>
+	<!--圖片輪播需用-->
+	<!--bookstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!--bookstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<!--圖片輪播需用-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+  #fountainTextG {
+   width: 270px;
+   margin: auto;
+  }
+
+  .fountainTextG {
+   color: rgb(252, 65, 96);
+   font-family: Arial;
+   font-size: 28px;
+   text-decoration: none;
+   font-weight: normal;
+   font-style: normal;
+   float: left;
+   animation-name: bounce_fountainTextG;
+   -o-animation-name: bounce_fountainTextG;
+   -ms-animation-name: bounce_fountainTextG;
+   -webkit-animation-name: bounce_fountainTextG;
+   -moz-animation-name: bounce_fountainTextG;
+   animation-duration: 2.09s;
+   -o-animation-duration: 2.09s;
+   -ms-animation-duration: 2.09s;
+   -webkit-animation-duration: 2.09s;
+   -moz-animation-duration: 2.09s;
+   animation-iteration-count: infinite;
+   -o-animation-iteration-count: infinite;
+   -ms-animation-iteration-count: infinite;
+   -webkit-animation-iteration-count: infinite;
+   -moz-animation-iteration-count: infinite;
+   animation-direction: normal;
+   -o-animation-direction: normal;
+   -ms-animation-direction: normal;
+   -webkit-animation-direction: normal;
+   -moz-animation-direction: normal;
+   transform: scale(.5);
+   -o-transform: scale(.5);
+   -ms-transform: scale(.5);
+   -webkit-transform: scale(.5);
+   -moz-transform: scale(.5);
+  }
+
+  #fountainTextG_1 {
+   animation-delay: 0.75s;
+   -o-animation-delay: 0.75s;
+   -ms-animation-delay: 0.75s;
+   -webkit-animation-delay: 0.75s;
+   -moz-animation-delay: 0.75s;
+  }
+
+  #fountainTextG_2 {
+   animation-delay: 0.9s;
+   -o-animation-delay: 0.9s;
+   -ms-animation-delay: 0.9s;
+   -webkit-animation-delay: 0.9s;
+   -moz-animation-delay: 0.9s;
+  }
+
+  #fountainTextG_3 {
+   animation-delay: 1.05s;
+   -o-animation-delay: 1.05s;
+   -ms-animation-delay: 1.05s;
+   -webkit-animation-delay: 1.05s;
+   -moz-animation-delay: 1.05s;
+  }
+
+  #fountainTextG_4 {
+   animation-delay: 1.2s;
+   -o-animation-delay: 1.2s;
+   -ms-animation-delay: 1.2s;
+   -webkit-animation-delay: 1.2s;
+   -moz-animation-delay: 1.2s;
+  }
+
+
+
+
+  @keyframes bounce_fountainTextG {
+   0% {
+    transform: scale(1);
+    color: rgba(235, 85, 135, 0.99);
+   }
+
+   100% {
+    transform: scale(.5);
+    color: rgb(255, 255, 255);
+   }
+  }
+
+  @-o-keyframes bounce_fountainTextG {
+   0% {
+    -o-transform: scale(1);
+    color: rgba(235, 85, 135, 0.99);
+   }
+
+   100% {
+    -o-transform: scale(.5);
+    color: rgb(255, 255, 255);
+   }
+  }
+
+  @-ms-keyframes bounce_fountainTextG {
+   0% {
+    -ms-transform: scale(1);
+    color: rgba(235, 85, 135, 0.99);
+   }
+
+   100% {
+    -ms-transform: scale(.5);
+    color: rgb(255, 255, 255);
+   }
+  }
+
+  @-webkit-keyframes bounce_fountainTextG {
+   0% {
+    -webkit-transform: scale(1);
+    color: rgba(235, 85, 135, 0.99);
+   }
+
+   100% {
+    -webkit-transform: scale(.5);
+    color: rgb(255, 255, 255);
+   }
+  }
+
+  @-moz-keyframes bounce_fountainTextG {
+   0% {
+    -moz-transform: scale(1);
+    color: rgba(235, 85, 135, 0.99);
+   }
+
+   100% {
+    -moz-transform: scale(.5);
+    color: rgb(255, 255, 255);
+   }
+  }
+
+  .loading-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: white;
+   z-index: 9999;
+  }
+
+  .loading {
+   position: absolute;
+   width: 200px;
+   height: 80px;
+   top: 40%;
+   left: 40%;
+   margin-top: -15px;
+   margin-left: -15px;
+   
+  }
+ </style>
+</head>
+
+<body class="noto-sans-jp-<uniquifier>">
+   <div class="loading-wrapper">
+  <div id="fountainTextG" class="loading">
+   <div id="fountainTextG_1" class="fountainTextG" style="font-size: 80px;">K</div>
+   <div id="fountainTextG_2" class="fountainTextG" style="font-size: 80px;">G</div>
+   <div id="fountainTextG_3" class="fountainTextG" style="font-size: 80px;">H</div>
+   <div id="fountainTextG_4" class="fountainTextG" style="font-size: 80px;">S</div>
+  </div>
+  <script>
+  $(document).ready(function() {
+   setTimeout(function() {
+    $(".loading-wrapper").fadeOut(500);
+   }, 4000);
+  });
+ </script>
+ </div>
+	<nav style="position: relative;">
+		<a target="_self" href="index.html"><img src="img/kghs_logo.png" style="position: absolute; left: 0; width: 200px; height: 50px"></a>
+		<ul class="menu">
+			<li><a target="_blank" href="administrative_unit.html"><i class="fa-solid fa-user-tie fa-fw"></i>行政單位</a>
+				<!--第一層-->
+				<ul style="padding-left: 0; text-align: center;">
+					<!--第二層-->
+					<li><a target="_blank" href="administrative_unit.html">校長室</a></li>
+					<li><a target="_blank" href="administrative_unit.html#page2">學務處</a></li>
+					<li><a target="_blank" href="administrative_unit.html#page3">教務處</a></li>
+					<li><a target="_blank" href="administrative_unit.html#page4">總務處</a></li>
+				</ul>
+			</li>
+			<li><a target="_self" href="honor.html"><i class="fa-solid fa-award fa-fw"></i>榮譽榜</a>
+			  <ul style="padding-left: 0; text-align: center;">
+					<!--第二層-->
+					<li><a target="_self" href="honor.html">榮譽榜</a></li>
+					<li><a target="_self" href="index_thank.html">感謝頁面</a></li>
+				</ul>
+				<!--第一層-->
+			</li>
+			<li><a target="_self" href="inner.html"><i class="fa-solid fa-bullhorn fa-fw"></i>校內公告</a>
+				<!--第一層-->
+
+			</li>
+			<li><a target="_blank" href="recent_activity.html"><i class="fa-solid fa-person-walking fa-fw"></i>近期活動</a></li>
+			<!--第一層-->
+			<li><a target="_blank" href="calendar.html"><i class="fa-solid fa-calendar-days fa-fw"></i>行事曆</a></li>
+			<!--第一層-->
+
+		</ul>
+	</nav>
+
+	<main class="grid-container">
+
+		<header style="background-image: url(img/kghs.png)">
+			<h1 style="color: aliceblue;text-shadow: 2px 2px 8px black;">高雄市立高雄女子高級中學</h1>
+
+		</header>
+		<!--
+		<section class="awSlider middle">
+		<h1><marquee direction="left" scrollamount="5">跑馬燈測試</marquee></h1>
+			<div class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target=".carousel" data-slide-to="0" class="active"></li>
+					<li data-target=".carousel" data-slide-to="1"></li>
+					<li data-target=".carousel" data-slide-to="2"></li>
+					<li data-target=".carousel" data-slide-to="3"></li>
+				</ol>
+
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-941.jpg">
+						<div class="carousel-caption">Görsel #1</div>
+					</div>
+					<div class="item">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-101.jpg">
+						<div class="carousel-caption">Görsel #2</div>
+					</div>
+					<div class="item">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2014/02/wallpaper-thumb-1051.jpg">
+						<div class="carousel-caption">Görsel #3</div>
+					</div>
+					<div class="item">
+						<img src="http://www.adobewordpress.com/wp-content/uploads/2013/07/wallpaper-thumb-74.jpg">
+						<div class="carousel-caption">Görsel #4</div>
+					</div>
+				</div>
+
+				<a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Geri</span>
+				</a>
+				<a class="right carousel-control" href=".carousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">İleri</span>
+				</a>
+			</div>
+		</section>
+-->
+
+
+		<!--圖片輪播-->
+
+		<section class="middle">
+
+			<h1>
+				<marquee direction="left" scrollamount="5">賀!高雄女中100周年</marquee>
+			</h1>
+
+			<div>
+				<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+						<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active" data-bs-interval="3000">
+							<a target="_blank" href="lecture_inner_p.html"><img src="img/lecture_inner.jpg" class="d-block w-100" alt="講座"></a>
+							<div class="carousel-caption d-none d-md-block">
+								<h4 style="font-size: 70px;">本校百年校慶講座—謝淑文</h4>
+								<p style="font-size: 36px; text-align: center;">謝淑文是本校優秀校友，她將以幽默吸睛的方式來本校分享經驗</p>
+							</div>
+						</div>
+
+						<div class="carousel-item" data-bs-interval="3000">
+							<a target="_blank" href="book_inner_p.html"><img src="img/book_inner.jpg" class="d-block w-100" alt="校長贈送「老鹽埕的記憶之味」"></a>
+							<div class="carousel-caption d-none d-md-block">
+								<h4 style="font-size: 70px;">校長贈送「老鹽埕的記憶之味」</h4>
+								<p style="font-size: 36px; text-align: center;">鄭文儀校長贈送「老鹽埕的記憶之味」乙書給10家接受採訪的老店</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<a target="_blank" href="fschool_inner_p.html"><img src="img/fschool_inner.jpg" class="d-block w-100" alt="里昂國際學校「藝術柯南」課程交流"></a>
+							<div class="carousel-caption d-none d-md-block">
+								<h4 style="font-size: 70px;">里昂國際學校「藝術柯南」課程交流</h4>
+								<p style="font-size: 36px; text-align: center;">高雄女中高一多元選修「藝術柯南」跨國故事交流課程</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+			<br>
+			<h1 style="text-align: center;">佈告欄</h1>
+
+			<ul class="nav nav-pills mb-3 container" id="pills-tab" role="tablist">
+				<li class="nav-item col" role="presentation">
+					<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">最近消息</button>
+				</li>
+				<li class="nav-item col" role="presentation">
+					<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">總務處</button>
+				</li>
+				<li class="nav-item col" role="presentation">
+					<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">教務處</button>
+				</li>
+				<li class="nav-item col" role="presentation">
+					<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-student" type="button" role="tab" aria-controls="pills-student" aria-selected="false">學務處</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="pills-tabContent">
+				<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+					<ul>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal">【教務處】113學年度高三「數A滿級挑戰」比賽實施辦法</button>
+							<div class="modal fade" id="exampleModal">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：教學組 發布者：教學組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<ol>
+												<li>目的：為提升本校學生數學能力，適應學測數學題型，特定本辦法。
+												</li>
+												<li>主辦單位：高雄女中教務處
+													協辦單位：高雄女中數學科</li>
+												<li>參加對象：應屆高三同學自由報名。</li>
+												<li>活動時間：<br>
+													暑輔期間：每週三 13：30至14：40。（報名同學）<br>
+													開學後：週一彈性時間 13：30至14：30。（暑輔測驗總分前100名）</li>
+												<li>測驗地點：<mark class="yellow">第一會議室。</mark>（暑輔期間視報名人數加開教室）</li>
+												<li>報名方式：請各班數學小老師於<mark class="yellow">6月7日（五）12：30</mark>前，利用班級名條勾選填寫參賽同學名單，並將名單送交各班數學任課老師。</li>
+											</ol>
+											請高二升高三同學踴躍報名
+											<br>
+											<a target="_blank" href="/pdf/%E6%95%B8A%E6%BB%BF%E7%B4%9A%E6%8C%91%E6%88%B0.pdf">更多相關實施辦法</a>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_2">【學務處】樂學展翼獎學金</button>
+							<div class="modal fade" id="exampleModal_2">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：學務處 發布者：學務處主任</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>獎勵對象：高雄女中畢業就讀大專院校學生。 </p>
+											<p>名額：<mark class="yellow">每學年度三名。</mark></p>
+											<p>金額：申請合於資格之每位學生可獲得<mark class="yellow">獎助學金壹萬元整。</mark> </p>
+											申請資格及辦法：<br>（一）推薦管道：經由師長推薦。 <br>（二）申請時應檢附之文件（各一份）：<br>
+											<ol>
+												<li>本獎助學金申請書</li>
+												<li>學生證影印本</li>
+												<li>最新戶籍謄本影印本</li>
+												<li>自傳</li>
+												<li>其他參考文件</li>
+											</ol> <br>（三）初選合格者，本會得派員至申請學生住所實際了解家庭狀況。
+											<p>申請截止日期：<mark class="yellow">9 月 30 日前</mark>交由高雄女中學務處辦理。</p>
+											<p>更多詳細資訊及申請單請到以下檔案查看</p>
+											<a target="_blank" href="/pdf/%E6%A8%82%E5%AD%B8%E5%B1%95%E7%BF%BC%E7%8D%8E%E5%AD%B8%E9%87%91%E7%94%B3%E8%AB%8B%E8%BE%A6%E6%B3%95.pdf">樂學展翼獎學金</a>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_3">【總務處】轉知高雄市稅捐稽徵處舉辦「數字迷宮突圍戰」租稅宣傳活動</button>
+							<div class="modal fade" id="exampleModal_3">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：總務處 發布者：總務處組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>活動期間：自即日起至<mark class="yellow">112年9月30日止。</mark></p>
+
+											活動內容：<br>
+											（一）至活動網站會員專區完成會員註冊即可參加遊戲。<br>
+											（二）高手獎<br>
+											<ol>
+												<li>可依任意方向連線消除三個以上相同數字或圖案，即可取得對應分數，消除至出現數字5即過關，得分為當局分數的合計數。過關後可參加加乘任務，通過任務該局得分乘5倍。</li>
+												<li>得分累計達5,000分可獲得一次抽獎機會，積分越高抽獎機會越多。</li>
+											</ol>
+
+
+											<br>
+											<p>獎項內容： <br>
+
+												（一）高手獎<br>
+											<ol>
+												<li>頭獎：平板電腦，1名。</li>
+												<li>貳獎：藍芽喇叭，3名。</li>
+												<li>參獎：雙人餐券，6名。</li>
+												<li>普獎：超商200元電子購物金，200名。</li>
+											</ol><br>
+											（二）加碼獎<br>
+											<ol>
+												<li> 頭獎：氣炸鍋，1名。</li>
+												<li>貳獎：雙人餐券，3名。</li>
+												<li>普獎：超商200元電子購物金，60名。</li>
+											</ol>
+											</p>
+											<p>活動詳情請至<a target="_blank" href="https://www.kctax.gov.tw/main/index.aspx">高雄市稅捐稽徵處</a>查詢。</p>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_4">【學務處】中華電信學院2021寒假科學營</button>
+							<div class="modal fade" id="exampleModal_4">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：學務處 發布者：學務處主任</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>中華電信學院2021寒假科學營開始報名了，開設課程有以下等多種課程（其餘課程詳見網址）</p>
+											<ol>
+												<li>APCS初階研習營（台中、板橋） </li>
+												<li>新聞主播教你掌握鏡頭表達力 </li>
+												<li>智慧科技應用科學營（第一梯） </li>
+												<li>5G智慧生活 </li>
+												<li>創客智慧應用研習營 </li>
+												<li>物聯網實作研習營 </li>
+												<li>Python人工智慧科學營 </li>
+												<li>無人機應用研習班 </li>
+												<li>Javascript科學計算與機器學習實作營 </li>
+											</ol>
+											<br>
+											<p>活動報名，請參閱以下網址：</p>
+											<a target="_blank" href="https://www.chtti.cht.com.tw/general/index.jsp?type_id=20">中華電信學院</a>
+
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+					<ul>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t1">【總務處】轉知高雄市稅捐稽徵處舉辦「數字迷宮突圍戰」租稅宣傳活動</button>
+							<div class="modal fade" id="exampleModal_t1">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：總務處 發布者：總務處組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>活動期間：自即日起至<mark class="yellow">112年9月30日止。</mark></p>
+
+											活動內容：<br>
+											（一）至活動網站會員專區完成會員註冊即可參加遊戲。<br>
+											（二）高手獎<br>
+											<ol>
+												<li>可依任意方向連線消除三個以上相同數字或圖案，即可取得對應分數，消除至出現數字5即過關，得分為當局分數的合計數。過關後可參加加乘任務，通過任務該局得分乘5倍。</li>
+												<li>得分累計達5,000分可獲得一次抽獎機會，積分越高抽獎機會越多。</li>
+											</ol>
+
+
+											<br>
+											<p>獎項內容： <br>
+
+												（一）高手獎<br>
+											<ol>
+												<li>頭獎：平板電腦，1名。</li>
+												<li>貳獎：藍芽喇叭，3名。</li>
+												<li>參獎：雙人餐券，6名。</li>
+												<li>普獎：超商200元電子購物金，200名。</li>
+											</ol><br>
+											（二）加碼獎<br>
+											<ol>
+												<li>頭獎：氣炸鍋，1名。</li>
+												<li>貳獎：雙人餐券，3名。</li>
+												<li>普獎：超商200元電子購物金，60名。</li>
+											</ol>
+											</p>
+											<p>活動詳情請至<a target="_blank" href="https://www.kctax.gov.tw/main/index.aspx">高雄市稅捐稽徵處</a>查詢。</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t2">【總務處】轉知高雄市稅捐稽徵處舉辦「稅務星攻略-地價稅篇」有獎之徵答活動</button>
+							<div class="modal fade" id="exampleModal_t2">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：總務處 發布者：總務處組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>即日起至<mark class="yellow">11月30日止</mark>，參加<a target="_blank" href="https://www.kctax.gov.tw/main/index.aspx">高雄市稅捐處</a>舉辦之「稅務星攻略-地價稅篇」活動，即可抽平板電腦、快充行動電源等好禮！詳情請至該處網站查詢。</p>
+											<p><a target="_blank" href="img/%E6%B4%BB%E5%8B%95DM%20(3).jpg">活動DM</a>
+											</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t3">【總務處】高雄女中112學年度第2學期特殊身分學生學雜費減免申請通知</button>
+							<div class="modal fade" id="exampleModal_t3">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：總務處 發布者：總務處幹事</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<ol>
+												<li>自112學年第2學期開始高中<mark class="yellow">全面免學費，註冊時逕予減免，原則不須申請</mark>。
+													（高中教育法第56條規定未具有中華民國國籍、重讀之學生，不適用）</li><br>
+
+												<li>特殊身分學生者（軍公教遺族、原住民學生、身心障礙人士子女、身心障礙學生、低收入戶學生、中低收入戶學生、特殊境遇家庭子女或孫子女）須依下列規定辦理：</li>
+												<ol>
+													<li><mark class="yellow">第1學期巳申請全學年減免者,免再填申請書</mark>，但巳申辧低收入戶、中低收入戶學生、特殊境遇家庭學生應補送113年有效期限證明文件，於113.1.31前送總務處審核。</li>
+
+													<li>新增符合特殊身分者，於113年1月20日前逕至總務處填單申請。</li>
+
+													<li>雙重身分者，得併附證明文件擇優補助。</li>
+												</ol>
+												<br>
+												<li>承辦人：總務處沈小姐，電話：07-2115418轉408，傳真：07-2115430。</li>
+											</ol>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t4">【總務處】112學年度第二學期高三註冊費「游泳池水電及管理費」項目收費說明</button>
+							<div class="modal fade" id="exampleModal_t4">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：總務處 發布者：總務處組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>學校體育課上游泳課的期程安排為「高一下」、「高二上」、「高二下」及「高三上」，共四個學期。這四個學期於期初註冊費中會收取「游泳池水電及管理費」該項費用。但因上學期學校游泳池施工，不確定因素下，高三同學當時沒有進行收費。而學校游泳池於開學時順利完工驗收下，因考量教學完整性，也如期將高三同學游泳課安排於進度中，故<mark class="yellow">相關費用會編列於高三下學期註冊費進行補收。</mark></p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+					<ul>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t7">【教務處】113學年度高三「數A滿級挑戰」比賽實施辦法</button>
+							<div class="modal fade" id="exampleModal_t7">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：教學組 發布者：教學組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<ol>
+												<li>目的：為提升本校學生數學能力，適應學測數學題型，特定本辦法。
+												</li>
+												<li>主辦單位：高雄女中教務處
+													協辦單位：高雄女中數學科</li>
+												<li>參加對象：應屆高三同學自由報名。</li>
+												<li>活動時間：<br>
+													暑輔期間：每週三 13：30至14：40。（報名同學）<br>
+													開學後：週一彈性時間 13：30至14：30。（暑輔測驗總分前100名）</li>
+												<li>測驗地點：<mark class="yellow">第一會議室。</mark>（暑輔期間視報名人數加開教室）</li>
+												<li>報名方式：請各班數學小老師於<mark class="yellow">6月7日（五）12：30</mark>前，利用班級名條勾選填寫參賽同學名單，並將名單送交各班數學任課老師。</li>
+											</ol>
+											請高二升高三同學踴躍報名
+											<br>
+											<a target="_blank" href="/pdf/%E6%95%B8A%E6%BB%BF%E7%B4%9A%E6%8C%91%E6%88%B0.pdf">更多相關實施辦法</a>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t52">【教務處】轉知財團法人語言訓練中心辦理「日本語教師養成工作坊」</button>
+							<div class="modal fade" id="exampleModal_t52">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：教學組 發布者：教學組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											一. 2024年7月26日「日本語教師養成工作坊 第二場：文法&會話教學」及2024年8月31日「JLPT N1-N3備考講座」線上講座資訊。敬請踴躍報名，
+											二. 本中心係日本京都大學及日本臺灣交流協會等指定合作單位，亦為知名《日本語GoGoGo》系列教材之出版單位。<br>
+											三. 各場次講座資訊如下：<br>
+											(一)日本語教師養成工作坊 第二場：文法&會話教學<br>
+											１、日期：2024年7月26日（週五）<br>
+											２、時間：19:30 20:40<br>
+											３、內容：本講座旨在介紹日語教師應具備的基礎知識，包括自我檢視及教學法的選用，並探討如何將素養教育融入教學。課程將介紹誘發動機、情境建立、短期記憶、同儕互動和長期記憶的五步驟，以提升學生自主學習能力。<br>
+											(二)JLPT N1-N3備考講座<br>
+											１、日期：2024年8月21日（週三）<br>
+											２、時間：19:30 20:30<br>
+											３、內容：本講座將介紹新制「日本語能力測試（JLPT）」的四大出題類別：語彙、文法、讀解及聽解。說明各項目之出題方式與例題，協助參與者了解適合應考的級數，並提供制定短期、中 期和長期學習計畫的建議，以有效提升學習成效。此外，講師還將分享考試當日的解題策略與實用技巧。<br>
+											四. 講座將使用Google Meet平台，即日起開放報名。<br>
+											五. 報名網址： <a href="https://lttc-li.tw/lecture/">https://lttc-li.tw/lecture/</a><br>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t41">【教務處】轉知台南市政府辦理「2024臺南講客夏令營--『客家青年夏令營』」</button>
+							<div class="modal fade" id="exampleModal_t41">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：教學組 發布者：教學組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											一、旨揭活動內容如下：<br>
+											(一)活動日期：113年7月21日至7月26日(6天5夜)<br>
+											(二)招收對象：高中生及大學生，不限客籍或是否具備客語能力，皆歡迎報名參加。<br>
+											(三)活動內容：有田野踏查、紀錄片欣賞、登好茶舊社認識魯凱族石板屋等多元文化族群活動。<br>
+											(四)活動費用：4,000元／人（含營隊中所有食、宿、交通、活動、保險等費用）。<br>
+											(五)報名網址：<a href="https://forms.gle/JgZLkNHfsjjTpJhr9">https://forms.gle/JgZLkNHfsjjTpJhr9</a>；活動日程請參閱：<a href="https://reurl.cc/NQOgRQ">https://reurl.cc/NQOgRQ</a>。<br>
+											二、若有相關問題歡迎來電06-2991111#8221曾小姐洽詢。
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_t33">【教務處】轉知財團法人語言訓練中心辦理「全民英檢」中級聽讀/一日考</button>
+							<div class="modal fade" id="exampleModal_t33">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：教學組 發布者：教學組長</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											一、「全民英檢」評量重點與課堂教學目標一致，適合大型測驗暖身練習。高中生取得「全民英檢」成績更可上傳「學習歷程檔案」，展現個人多元表現或作為大學免修英文證明等。<br>
+											二、報名資訊：<br>
+											(一)級 別：中級聽讀/一日考 (B1)<br>
+											(二)測驗日期：8/17 (六)<br>
+											(三)報名網址： https://bit.ly/4bdu0jZ<br>
+											三、「全民英檢」官網提供考前題型簡介與免費備考策略、學習資源；考後「GEPT聽診室」可瀏覽自己測驗表現與具體的學習建議，歡迎多加利用（ <a href="https://www.gept.org.tw/">https://www.gept.org.tw/</a> ）。
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-pane fade" id="pills-student" role="tabpanel" aria-labelledby="pills-student-tab">
+					<ul>
+
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_99">【學務處】樂學展翼獎學金</button>
+							<div class="modal fade" id="exampleModal_99">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：學務處 發布者：學務處主任</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>獎勵對象：高雄女中畢業就讀大專院校學生。 </p>
+											<p>名額：<mark class="yellow">每學年度三名。</mark></p>
+											<p>金額：申請合於資格之每位學生可獲得<mark class="yellow">獎助學金壹萬元整。</mark> </p>
+											申請資格及辦法：<br>（一）推薦管道：經由師長推薦。 <br>（二）申請時應檢附之文件（各一份）：<br>
+											<ol>
+												<li>本獎助學金申請書</li>
+												<li>學生證影印本</li>
+												<li>最新戶籍謄本影印本</li>
+												<li>自傳</li>
+												<li>其他參考文件</li>
+											</ol> <br>（三）初選合格者，本會得派員至申請學生住所實際了解家庭狀況。
+											<p>申請截止日期：<mark class="yellow">9 月 30 日前</mark>交由高雄女中學務處辦理。</p>
+											<p>更多詳細資訊及申請單請到以下檔案查看</p>
+											<a target="_blank" href="/pdf/%E6%A8%82%E5%AD%B8%E5%B1%95%E7%BF%BC%E7%8D%8E%E5%AD%B8%E9%87%91%E7%94%B3%E8%AB%8B%E8%BE%A6%E6%B3%95.pdf">樂學展翼獎學金</a>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_25">【學務處】高一「第一輪及第二輪-彈性時間微課程」加選事宜</button>
+							<div class="modal fade" id="exampleModal_25">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：學務處 發布者：學務處主任</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											學務處公告：<br><br>
+
+											一、高一彈性課程「第一輪及第二輪-彈性時間微課程」加選事宜。<br><br>
+
+											二、加選時間：9 月17 日08：00 起，至9 月18 日晚上22：00 止。<br><br>
+
+											三、請沒有課程的同學(含圖書館同學)，填寫「補加選志願序」，如無意選課者請勿填該課程(選上後不能退選課，請留意)。<br><br>
+
+											四、方式採志願序方式(非先搶先贏)<br><br>
+
+											五、加選課網址：<br><br>
+
+											第一輪加選網址：<a href="https://forms.gle/2rNYGQGwdxQnzXJj7">https://forms.gle/2rNYGQGwdxQnzXJj7</a><br><br>
+
+											第二輪加選網址：<a href="https://forms.gle/iR5Q9CLaVfyN581WA">https://forms.gle/iR5Q9CLaVfyN581WA</a><br><br>
+
+											六、以上有任何問題，請至學務處詢問。
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_11">【學務處】高三自主學習-課程成果多元活動與學習歷程自述的寫作指導網址</button>
+							<div class="modal fade" id="exampleModal_11">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：學務處 發布者：學務處主任</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											1.高三課程諮詢團體輔導簡報第一部分審查教授的學習歷程評分系統<br>
+											<a href="https://youtu.be/fvcT6viylbQ">https://youtu.be/fvcT6viylbQ</a><br>
+											2.高三課程諮詢團體輔導第三部分簡報課程成果簡介與摘要寫作指導<br>
+											<a href="https://youtu.be/lLQ2GBAXgJg">https://youtu.be/lLQ2GBAXgJg</a><br>
+											3.高三課程諮詢團體輔導第二部分簡報學習歷程自述寫作指導<br>
+											<a href="https://youtu.be/uDTdZ1EtoaY">https://youtu.be/uDTdZ1EtoaY</a>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<button type="button" class="btn btn-#f3f5e9" data-bs-toggle="modal" data-bs-target="#exampleModal_10">【學務處】中華電信學院寒假科學營</button>
+							<div class="modal fade" id="exampleModal_10">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">單位處室：學務處 發布者：學務處主任</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<p>中華電信學院2021寒假科學營開始報名了，開設課程有以下等多種課程（其餘課程詳見網址）</p>
+											<ol>
+												<li>APCS初階研習營（台中、板橋） </li>
+												<li>新聞主播教你掌握鏡頭表達力 </li>
+												<li>智慧科技應用科學營（第一梯） </li>
+												<li>5G智慧生活 </li>
+												<li>創客智慧應用研習營 </li>
+												<li>物聯網實作研習營 </li>
+												<li>Python人工智慧科學營 </li>
+												<li>無人機應用研習班 </li>
+												<li>Javascript科學計算與機器學習實作營 </li>
+											</ol>
+											<br>
+											<p>活動報名，請參閱以下網址：</p>
+											<a target="_blank" href="https://www.chtti.cht.com.tw/general/index.jsp?type_id=20">中華電信學院</a>
+
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">離開</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+			<br>
+
+			<div>
+				<div id="carouselExample_1" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExample_1" data-bs-slide-to="0" class="active"></button>
+						<button type="button" data-bs-target="#carouselExample_1" data-bs-slide-to="1"></button>
+						<button type="button" data-bs-target="#carouselExample_1" data-bs-slide-to="2"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active" data-bs-interval="3000">
+							<a target="_blank" href="recent_activity.html"><img src="img/sport.jpg" class="d-block w-100" alt="馬祖"></a>
+							<div class="carousel-caption d-none d-md-block">
+								<h4 style="font-size: 70px;">百年校慶</h4>
+								<p style="font-size: 36px; text-align: center;">此次校慶有非常多活動，歡迎大家參與</p>
+							</div>
+						</div>
+
+						<div class="carousel-item" data-bs-interval="3000">
+                            <a target="_blank" href="recent_activity.html#page2"><img src="img/c.png" class="d-block w-100" alt="巴黎"></a>
+							<div class="carousel-caption d-none d-md-block">
+								<h4 style="font-size: 70px;">畢業典禮</h4>
+								<p style="font-size: 36px; text-align: center;">雄女第76屆畢業典禮</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+                            <a target="_blank" href="recent_activity.html#page4"><img src="img/chrismas_n.jpg" class="d-block w-100" alt="里斯本"></a>
+							<div class="carousel-caption d-none d-md-block">
+								<h4 style="font-size: 70px;">耶誕節活動</h4>
+								<p style="font-size: 36px; text-align: center;">找聖誕老公公領糖果</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample_1" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExample_1" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+				
+				
+				
+			</div>
+
+
+		</section>
+
+		<!--圖片輪播-->
+
+		<footer>
+			<a href="https://www.facebook.com/KaohsiungGirlsHighSchool" target="_blank" class="a1"><i class="fa-brands fa-facebook fa-fw fa-2x"></i></a>
+
+			<a href="https://www.youtube.com/@kghs75th_ga" target="_blank" class="a2"><i class="fa-brands fa-youtube fa-fw fa-2x"></i></a>
+			<a href="https://www.google.com.tw/maps/place/%E9%AB%98%E9%9B%84%E5%B8%82%E7%AB%8B%E9%AB%98%E9%9B%84%E5%A5%B3%E5%AD%90%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8/@22.6212907,120.2902669,17z/data=!3m1!4b1!4m6!3m5!1s0x346e047ee61e13f5:0xe00ed570cc44f1cb!8m2!3d22.6212858!4d120.2928418!16s%2Fg%2F11bc620l7k?hl=zh-TW&entry=ttu" target="_blank" class="a3"><i class="fa-solid fa-map fa-fw fa-2x"></i></a>
+			<p>電話： 07-xxxxxxx</p>
+			<p>地址： 高雄市前金區</p>
+			<p>Copyright © 高雄女中</p>
+		</footer>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>高雄女中行事曆</title>
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <link rel="stylesheet" href="css/sass.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<!--bookstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    
+    .holidayEvent {
+      background-color: #e5be20;
+      border-color: #e5be20;
+    }
+    .fc-event {
+           cursor: pointer; 
+        }
+    
+</style>
+
+<body>
+     <nav style="position: relative;">
+		<ul class="menu">
+			<li><a target="_blank" href="administrative_unit.html"><i class="fa-solid fa-user-tie fa-fw"></i>行政單位</a>
+				<!--第一層-->
+				<ul style="padding-left: 0; text-align: center;">
+					<!--第二層-->
+					<li><a target="_blank" href="administrative_unit.html">校長室</a></li>
+					<li><a target="_blank" href="administrative_unit.html#page2">學務處</a></li>
+					<li><a target="_blank" href="administrative_unit.html#page3">教務處</a></li>
+					<li><a target="_blank" href="administrative_unit.html#page4">總務處</a></li>
+				</ul>
+			</li>
+			<li><a target="_self" href="honor.html"><i class="fa-solid fa-award fa-fw"></i>榮譽榜</a>
+			  <ul style="padding-left: 0; text-align: center;">
+					<!--第二層-->
+					<li><a target="_self" href="honor.html">榮譽榜</a></li>
+					<li><a target="_self" href="index_thank.html">感謝頁面</a></li>
+				</ul>
+				<!--第一層-->
+			</li>
+			<li><a target="_self" href="inner.html"><i class="fa-solid fa-bullhorn fa-fw"></i>校內公告</a>
+				<!--第一層-->
+
+			</li>
+			<li><a target="_blank" href="recent_activity.html"><i class="fa-solid fa-person-walking fa-fw"></i>近期活動</a></li>
+			<!--第一層-->
+			<li><a target="_blank" href="calendar.html"><i class="fa-solid fa-calendar-days fa-fw"></i>行事曆</a></li>
+			<!--第一層-->
+
+		</ul>
+	</nav>
+<!--  
+  <nav class="navbar sticky-top navbar-expand-md bg-white">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+			<img src="img/door.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">校內公告</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">近期活動</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">行事曆</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">榮譽榜</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">行政單位</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">學務處</a></li>
+							<li><a class="dropdown-item" href="#">教務處</a></li>
+							<li><a class="dropdown-item" href="#">總務處</a></li>
+							<li><a class="dropdown-item" href="#">校長室</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+-->
+   
+    <!-- Calendar position -->
+    <div id="calendar"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const calendarEl = document.getElementById("calendar")
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          headerToolbar: {
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth,timeGridWeek,timeGridDay",
+          },
+          buttonText: {
+            today: "Today",
+            month: "Month",
+            week: "Week",
+            day: "Day",
+          },
+          // ----- 本段落新增開始 -----
+          events: [ // Events 
+            {
+              title: "All Day Event",
+              start: "2024-06-04",
+            },
+            {
+              title: "畢業典禮",
+              start: "2024-06-04 09:00:00",
+            },
+              
+            {
+              title: "All Day Event",
+              start: "2024-06-28",
+            },
+            {
+              title: "校務會議",
+              start: "2024-06-28 09:00:00",
+            },
+            {
+              title: "休業式",
+              start: "2024-06-28 09:00:00",
+            },
+              
+            {
+              title: "All Day Event",
+              start: "2024-06-11",
+            },
+            {
+              title: "精神科醫生駐診",
+              start: "2024-06-11 09:00:00",
+            },
+              
+            {
+              title: "解密AI黑盒子: 南區",
+              start: "2024-07-01",
+              end: "2024-07-05",
+            },
+              
+            {
+              title: "升高三暑輔",
+              start: "2024-07-21",
+              end: "2024-08-09",
+            },
+              
+            {
+              title: "電資班招生 小斑馬營",
+              start: "2024-07-22",
+              end: "2024-07-26",
+            },
+              
+            {
+              title: "中學生黑客松: 雛型試作(南北區)",
+              start: "2024-07-01",
+            },
+              
+            {
+              title: "中學生黑客松: 雛型試作(中區)",
+              start: "2024-07-03",
+            },
+              
+            {
+              title: "All Day Event",
+              start: "2024-06-13",
+            },
+            {
+              title: "個人申請公告統一分發結果",
+              start: "2024-06-13 09:00:00",
+            },
+              
+            {
+              title: "All Day Event",
+              start: "2024-07-06",
+            },
+            {
+              title: "全國儀隊比賽決賽",
+              start: "2024-07-06 09:00:00",
+            },
+              
+            {
+              title: "All Day Event",
+              start: "2024-04-28",
+            },
+            {
+              title: "高雄市第64屆科展 頒獎典禮",
+              start: "2024-04-28 09:00:00",
+            },
+              
+            {
+              title: "繁星第八學群、個人申請 第二階段甄試",
+              start: "2024-05-16",
+              end: "2024-06-03",
+            },
+              
+            {
+              title: "模擬面試",
+              start: "2024-05-06",
+              end: "2024-05-13",
+            },
+              
+            {
+              title: "高三長假開始",
+              start: "2024-05-06",
+            },
+              
+              
+            {
+              title: "All Day Event",
+              start: "2024-07-11",
+            },
+            {
+              title: "免試報到、特色班報名",
+              start: "2024-07-11 09:00:00",
+            },
+              
+            {
+              title: "All Day Event",
+              start: "2024-07-20",
+            },
+            {
+              title: "中學黑客松決賽",
+              start: "2024-07-20 09:00:00",
+            },
+              
+            {
+              title: "分科測驗",
+              start: "2024-07-12",
+              end: "2024-07-14",
+            },
+              
+            {
+              title: "國中會考",
+              start: "2024-05-18",
+            },
+              
+            {
+              title: "個人申請正備取生登記志願序",
+              start: "2024-06-06",
+              end: "2024-06-08",
+            },
+            
+              
+            {
+              title: "百年校慶講座",
+              start: "2024-06-07 11:00:00",
+              end : "2024-06-07 13:00:00",
+            },  
+            
+            {
+              title: "端午節放假",
+              start: "2024-06-10 00:00:00",
+              end: "2024-06-10 23:00:00",
+              textColor: "#000",
+              className: "holidayEvent"
+            },
+              
+            {
+              title: "國中會考停課",
+              start: "2024-05-17 11:00:00",
+              end: "2024-05-17 17:00:00",
+              textColor: "#000",
+              className: "holidayEvent"
+            },
+          ],
+          eventClick: function(info) {
+            console.log(info.event)
+
+            Swal.fire({
+              icon: info.event.allDay ? "success" : "info",
+              title: info.event.title,
+              text: info.event.startStr,
+              confirmButtonText: "OK",
+            })
+          },
+          // ----- 本段落新增結束 -----
+        })
+        calendar.render()
+      })
+      
+    </script>
+    <!-- fullcalendar origin code--> 
+</body>
+</html>

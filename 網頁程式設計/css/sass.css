@@ -1,0 +1,118 @@
+html,body
+  cursor: none
+
+#myCursor
+  width: 50px
+  height: 50px
+  position: absolute
+
+/*導覽列*/
+nav {
+	grid-area: nav;
+	text-align: right;
+	font-size: 14px;
+	
+	border-radius: 10px;
+}
+
+/*導覽列三層選單設定*/
+ul {
+	/*取消ul預設的內縮及項目符號樣式*/
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.menu {
+	display: inline-block;
+}
+
+.menu li {
+	position: relative;
+	white-space: nowrap;
+	border-right: #f7e8dd 1px solid;
+}
+
+.menu > li:last-child {
+	border-right: none;
+}
+
+.menu > li {
+	float: left;
+	/*選單第一層由左到右顯示*/
+}
+
+.menu a {
+	/*選單樣式設定*/
+	display: block;
+	padding: 0 30px;
+	background-color: #fff;
+	color: #333333;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+.menu a:hover {
+	/*滑鼠移入按鈕變色*/
+	background-color: #cdbba7;
+	color: #ffffff;
+}
+
+.menu li:hover > a {
+	/*滑鼠移入第二層選單，第一層按鈕保持變色*/
+	background-color: #cdbba7;
+	color: #ffffff;
+}
+
+.menu ul {
+	border: #f7e8dd 1px solid;
+	position: absolute;
+	z-index: 99;
+	left: -1px;
+	top: 100%;
+	min-width: 150px;
+}
+
+.menu ul li {
+	border-bottom: #f7e8dd 1px solid;
+}
+
+.menu ul li:last-child {
+	border-bottom: none;
+}
+
+.menu ul ul {
+	/*第三層以後的選單出現位置與第二層不同*/
+	z-index: 999;
+	top: 0;
+	left: 90%;
+}
+
+.menu ul {
+	/*隱藏次選單*/
+	left: -99999px;
+	/*設定成最大的負數，將元素放到可視範圍外*/
+	opacity: 0;
+	/*完全透明*/
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+
+.menu li:hover > ul {
+	/*滑鼠移入展開選單*/
+	opacity: 1;
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+	left: -1px;
+	border-right: 5px;
+}
+
+.menu li:hover > ul ul {
+	/*滑鼠移入時，次選單之後的選單依然隱藏*/
+	left: -99999px;
+}
+
+.menu ul li:hover > ul {
+	/*第二層之後的選單位置*/
+	left: 90%;
+}

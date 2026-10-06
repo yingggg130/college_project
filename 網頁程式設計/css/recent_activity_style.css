@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+  }
+  
+  body, html {
+	margin: 0 auto;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+img {
+	max-width: 100%;
+	height: auto;
+}
+ 
+.testimonial-card .card-up {
+	height: 120px;
+	overflow: hidden;
+	border-top-left-radius: .25rem;
+	border-top-right-radius: .25rem;
+}
+.aqua-gradient {
+	background-image: linear-gradient(-225deg, #fccaaa 0%, #fd8282 48%, #ffa617 100%)!important;
+}
+.testimonial-card .avatar {
+	width: 120px;
+	margin-top: -60px;
+	overflow: hidden;
+	border: 5px solid #fff;
+	border-radius: 50%;
+}
+
+p {
+	text-align: justify;
+}
+
+h4 {
+	color:tomato;
+}
