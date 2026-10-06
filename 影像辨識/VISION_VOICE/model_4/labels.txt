@@ -1,0 +1,6 @@
+0 apple
+1 umbrella
+2 basketball
+3 quilt
+4 iphone
+5 others
